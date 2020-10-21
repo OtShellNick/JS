@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let a = parseInt(prompt('Введите первое число:'));  //Просим пользователя ввести первое число
+        let b = parseInt(prompt('Введите второе число: ')); //Просим пользователя ввести второе число
+
+        if (a >= 0 && b >= 0) { //Проверяем числа на положительный знак
+            let c = a - b;
+            alert('Ответ ' + c);
+        } else if (a < 0 && b < 0) { //Проверяем числа на отрицательный знак
+            let d = a*b;
+            alert('Ответ ' + d);
+        } else if ((a >=0 && b < 0) || (a < 0 && b >=0)){ //Проверяем числа на разные знаки
+            let sum = a + b;
+            alert('Ответ ' + sum);
+        }
+    </script>
+</body>
+</html>

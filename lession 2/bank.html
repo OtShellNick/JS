@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let n = String(prompt('Введите желаемую сумму вклада: ')); // просим ввести сумму вклада, переводим в строку
+
+
+        function lastChar(n) { //функция позволяет узнать последний символ в строке
+            let lastLet = n.charAt(n.length - 1);
+            return lastLet;
+        }
+        
+        let lastLet = lastChar(n); //вызов функции определения последнего символа
+
+        if (n == '11' || n == '12' || n =='13' || n == '14') { //проверяем строку на исключения из случаев
+            alert(n + ' рублей зачислено на Ваш счет!');
+        } else {                
+        switch (lastLet) { //проверем конец строки на символ и выбираем окончание
+            case '0':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+                alert(n + ' рублей зачислено на Ваш счет!');
+                break;
+            case '1':
+                alert(n + ' рубль зачислено на Ваш счет!');
+                break;
+            case '2':
+            case '3':
+            case '4':
+                alert(n + ' рубля зачислено на Ваш счет!');
+                break;
+        }
+        }
+    </script>
+</body>
+</html>

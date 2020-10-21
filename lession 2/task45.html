@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function sum(a, b) { //сумма
+            return a + b;
+        }
+
+        function diff(a, b) { //разность
+            return a - b;
+        }
+
+        function div(a, b) {  //деление
+            return a / b;
+        }
+
+        function mult(a, b) {  //умножение
+            return a * b;
+        }
+
+        function mathOperation(arg1, arg2, operation) { //функция принимающая два числовых аргумента и математическую операцию
+            switch (operation) {
+                case '+':
+                let summ = sum(arg1, arg2);
+                alert('Ответ ' + summ);
+                break;
+                case '-':
+                let difference = diff(arg1, arg2);
+                alert('Ответ ' + difference);
+                break;
+                case '/':
+                let division = div(arg1, arg2);
+                alert('Ответ ' + division);
+                break;
+                case '*':
+                let multiplication = mult(arg1, arg2);
+                alert('Ответ ' + multiplication);
+                break;
+            }
+        }
+
+        let a = parseInt(prompt('Введите первое число')); //просим ввести первое число
+        let b = parseInt(prompt('Введите второе число')); //просим ввести второе число
+        let c = prompt('Введите требуемую операцию +, -, / или *'); //спрашиваем требуемую операцию
+        let d = mathOperation(a, b, c); //вызов функции для определения операции
+        //на самом деле не совсем понял нужно было указывать свои числа и знаки операции для каждого отдельного случая и считать их
+        //или сделать как сейчас, ну в любом случае тренировка не будет лишней
+    </script>
+</body>
+</html>
