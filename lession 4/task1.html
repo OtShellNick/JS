@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*функция конструктор, которая создает объект с числом разложенным на сотни, десятки и единицы. */
+        function DigitsNumber(units, tens, hundreds) {
+            this.units = units;
+            this.tens = tens;
+            this.hundreds = hundreds;
+        }
+        /*просим пользователя ввести число и преобразовываем его в числовое значение*/
+        let number = parseInt(prompt('Введите целое число в диапазоне от 0 до 999'));
+        /*проверяем является ли число целым, находится ли в заданном диапазоне и число ли это вообще*/
+        if (Number.isInteger(number) && (0 < number < 999) && !NaN) {
+            let units = number % 10;
+            let tens = (Math.floor(number / 10)) % 10;
+            let hundreds = (Math.floor(number / 100)) % 10;
+            const digits = new DigitsNumber(units, tens, hundreds);
+            console.log(digits);
+        } else {
+            number = parseInt(prompt('Введенное число должно быть целым и находиться в диапазоне от 0 до 999'));
+        }
+    </script>
+</body>
+</html>
